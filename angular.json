@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "AngularQnutyun"
+    }
+  },
+  "defaultProject": "AngularQnutyun",
+  "cli": {
+    "analytics": "59abe88e-fb4f-4230-81a7-56da48668805"
+  }
 }

@@ -1,0 +1,24 @@
+<div class="m-2 row">
+    <h1 class="text text-info">Filter by Price:</h1>
+    <input [(ngModel)]="min" type="text" placeholder="Min Price" class="form-control m-2 w-25">
+    <input [(ngModel)]="max" type="text" placeholder="Max Price" class="form-control m-2 w-25">
+    </div>
+<div class="card-header text-center " style="background-color: cornsilk;">
+    MEDICINE
+</div>
+<div class="row">
+    <div class="col-sm-3 m-2" *ngFor="let m of dexer |filterByPrice:min:max, index as i"  (click)="border(i)" [class.border]= "indexes.includes(i)" [class.border-dark]= "indexes.includes(i)"   >
+          <div class="card  text-center bg-info"  >
+                <div class="card-title">
+                    <h2 class="card-title"><b>{{m.name}}</b></h2>
+                </div>
+                <div class="card-body">
+                    <h4>Price: {{m.price}}</h4>
+                    <h4>Count: {{m.count}}</h4>
+                    <a routerLink="/shop/medicine/{{i}}" class="btn btn-primary">See more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-danger w-25 " style="float: right;" (click)="buy()" >Buy</button>

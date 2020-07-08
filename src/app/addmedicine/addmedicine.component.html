@@ -1,0 +1,9 @@
+<h1 class="text-center text-primary">Add Medicine</h1>
+<div class="w-50 mx-auto card  p-3 m-2 text-center">
+    <input [(ngModel)]="medInp.name" type="text" placeholder="Name" class="form-control m-2">
+    <input [(ngModel)]="medInp.price" type="text" placeholder="Price" class="form-control m-2">
+    <input [(ngModel)]="medInp.count" type="text" placeholder="Count" class="form-control m-2">
+    <input [(ngModel)]="medInp.origin" type="text" placeholder="Origine" class="form-control m-2">
+    <textarea [(ngModel)]="medInp.description" placeholder="Description" class="form-control m-2"  rows="3"></textarea>
+    <button class="btn btn-primary w-25 mx-auto" (click)="addMed()">Add Medicine</button>
+</div>
