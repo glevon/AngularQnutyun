@@ -17,7 +17,13 @@ export class ShopComponent implements OnInit {
     this.dexer=this.medicine.getMedicine()
   }
   border(i){
-    this.indexes.push(i)
+    if(this.indexes.includes(i)){
+      this.indexes.splice(this.indexes.indexOf(i), 1);
+    }
+    else{
+
+      this.indexes.push(i)
+    }
   }
   buy(){
     this.medicine.buy(this.indexes)
